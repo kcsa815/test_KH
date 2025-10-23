@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>p403</title>
+	<style>
+		*{margin:0; padding: 0;} 
+		body{background-color: #cdcdcd; padding: 20px;}
+		#login{background-color: White;
+			border: 1px solid #222222; 
+			border-radius: 5px;
+			padding: 20px;
+			width:400px;
+			margin: 30px auto; 
+		}
+		#login fieldset{border: 1px solid #cdcdcd; margin-bottom:30px; }
+		#login legend{font-size: 16px; font-weight: bold; padding-left: 5px; padding-bottom:10px; }
+		#login label{padding:5px 10px; margin-bottom: 2px; } 
+		#login input{margin-bottom: 5px; padding-left: 40px;}     
+		#login button{font-size: 18px; border-radius: 10px; margin:2px auto; margin-left: 150px;}
+		
+		#login input[type=text], #login input[type=password], #login input[type=tel], #login input[type=email]{
+			border-radius: 4px;
+			font-size: 13px;
+			padding: 5px;
+			width: 200px;
+		}
+		#login input[required]{border: 1px red solid;}  
+	</style> 
+</head>
+<body>
+	<form id="login">
+		<fieldset>
+			<legend>LogIn Information</legend>
+				<label for="id">ID</label><input id="id" name="id" type="text" required="required" autofocus="autofocus" placeholder="insert your id"><br>
+				<label for="password">Password</label><input id="password" name="password" type="password" required="required"><br>
+				<label for="reCheck">Password Check</label><input id="password" name="check" type="password" required="required"><br>
+				<label for="dgree">Member Dgree</label><input id="mem" name="mem" value="subMember">
+		</fieldset>
+		<fieldset>
+			<legend>Personal Information</legend>
+				<label for="name">Name</label><input id="name" name="password" type="password" required="required" placeholder="None blank, less 5 character"><br>
+				<label for="mail">Mail Adress</label><input id="mail" name="mail" type="email" required="required" placeholder="abcd@naver.com"><br>
+				<label for="tel">Mobile</label><input id="tel" name="tel" type="text" required="required">
+		</fieldset>
+		<fieldset>
+			<button type="submit">Submit</button>
+		</fieldset>
+	</form>
+</body>
+</html>

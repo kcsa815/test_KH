@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>p394</title>
+<style>
+    body {	
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {      
+      width: 600px;
+      height: 500px;
+    }
+    .container > div {
+      border: 1px solid #222;
+      text-align: center;
+    }
+    .container{
+    	display: grid;
+    	grid-template-columns: repeat(3, 1fr);
+    	grid-template-rows: repeat(3, 1fr); 
+    	gap:10px;
+    }
+    .container >div:nth-child(odd){background-color: Pink;}
+    .container >div:nth-child(even){background-color: Red;}
+    
+    
+  </style>
+</head>
+<body>
+	<div class="container">
+		<div class="num1">1</div>
+		<div class="num2">2</div>
+		<div class="num3">3</div>
+		<div class="num4">4</div>
+		<div class="num5">5</div>
+		<div class="num6">6</div>
+		<div class="num7">7</div>
+		<div class="num8">8</div>
+		<div class="num9">9</div>
+	</div>
+</body>
+</html>

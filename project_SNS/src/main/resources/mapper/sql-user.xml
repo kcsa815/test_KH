@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.embed.repository.UserMapper">
+	
+	<!-- 회원 등록 -->
+	<insert id="insertUser" parameterType="org.embed.domain.UserDto">
+		<![CDATA[
+			INSERT INTO user (username, password, email)
+			VALUES (#{username}, #{password}, #{email});
+		]]>
+	</insert>
+	
+	<!-- 회원 조회 -->
+	<select id="findById" parameterType="int" resultType="org.embed.domain.UserDto">
+		<![CDATA[
+			SELECT * FROM user WHERE id = #{id};
+		]]>
+	</select>
+	
+	<!-- 로그인용 -->
+	<select id="findByUsername" parameterType="String" resultType="org.embed.domain.UserDto">
+		<![CDATA[
+			SELECT * FROM user WHERE username = {username};
+		]]>
+	</select>
+	
+</mapper>
